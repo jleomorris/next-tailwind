@@ -65,7 +65,7 @@ export default function Home() {
             </p>
           </a>
           <a
-            href='/tool'
+            href='/preview-tool'
             className='bg-yellow-200 text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border w-96 rounded-xl hover:text-black focus:text-black'
           >
             <h3 className='text-2xl font-bold'>Preview tool &rarr;</h3>
