@@ -26,7 +26,7 @@ export default function Home() {
         <div className='flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full'>
           <a
             href='https://tailwindcss.com/docs'
-            className='p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600'
+            className='bg-purple-200 text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border w-96 rounded-xl hover:text-black focus:text-black'
           >
             <h3 className='text-2xl font-bold'>Documentation &rarr;</h3>
             <p className='mt-4 text-xl'>
@@ -36,7 +36,7 @@ export default function Home() {
 
           <a
             href='https://play.tailwindcss.com/'
-            className='p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600'
+            className='bg-pink-200 text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border w-96 rounded-xl hover:text-black focus:text-black'
           >
             <h3 className='text-2xl font-bold'>Learn the basics &rarr;</h3>
             <p className='mt-4 text-xl'>
@@ -46,7 +46,7 @@ export default function Home() {
 
           <a
             href='https://blog.tailwindcss.com/'
-            className='p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600'
+            className='bg-green-200 text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border w-96 rounded-xl hover:text-black focus:text-black'
           >
             <h3 className='text-2xl font-bold'>Tailwind News &rarr;</h3>
             <p className='mt-4 text-xl'>
@@ -56,13 +56,20 @@ export default function Home() {
 
           <a
             href='https://tailwindui.com/'
-            className='p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600'
+            className='bg-blue-200 text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border w-96 rounded-xl hover:text-black focus:text-black'
           >
             <h3 className='text-2xl font-bold'>Tailwind UI &rarr;</h3>
             <p className='mt-4 text-xl'>
               Speed up development with pre-built, fully responsive official
               Tailwind CSS Components.{' '}
             </p>
+          </a>
+          <a
+            href='/tool'
+            className='bg-yellow-200 text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border w-96 rounded-xl hover:text-black focus:text-black'
+          >
+            <h3 className='text-2xl font-bold'>Preview tool &rarr;</h3>
+            <p className='mt-4 text-xl'>See the preview tool</p>
           </a>
         </div>
       </main>
