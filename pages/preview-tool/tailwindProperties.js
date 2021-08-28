@@ -1,4 +1,4 @@
-export const backgroundOptions = [
+export const backgroundClasses = [
   { value: 'bg-transparent', label: 'bg-transparent' },
   { value: 'bg-current', label: 'bg-current' },
   { value: 'bg-black', label: 'bg-black' },
@@ -77,7 +77,7 @@ export const backgroundOptions = [
   { value: 'bg-pink-900', label: 'bg-pink-900' },
 ];
 
-export const roundedOptions = [
+export const roundedClasses = [
   'rounded-none',
   'rounded-sm	',
   'rounded',
