@@ -308,3 +308,24 @@ export const fontWeightClasses = [
   'font-extrabold',
   'font-black',
 ];
+
+export const letterSpacingClasses = [
+  'tracking-tighter',
+  'tracking-tight',
+  'tracking-normal',
+  'tracking-wide',
+  'tracking-wider',
+  'tracking-widest',
+];
+
+export const boxShadowClasses = [
+  'shadow-sm',
+  'shadow	',
+  'shadow-md',
+  'shadow-lg',
+  'shadow-xl',
+  'shadow-2xl',
+  'shadow-inner',
+  'shadow-none',
+  'shadow-inner',
+];

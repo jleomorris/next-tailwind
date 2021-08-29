@@ -1,21 +1,32 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   backgroundClasses,
   borderRadiusClasses,
+  boxShadowClasses,
   fontColorClasses,
   fontSizeClasses,
   fontWeightClasses,
+  letterSpacingClasses,
   paddingClasses,
 } from './tailwindProperties';
+import head from 'next/head';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const tool = () => {
-  const [background, setBackground] = useState('bg-blue-500');
+  const [elementBackground, setElementBackground] = useState('bg-blue-500');
+  const [containerBackground, setContainerBackground] = useState('bg-gray-200');
   const [fontColor, setFontColor] = useState('text-black');
+  const [boxShadow, setBoxShadow] = useState('shadow-none');
   const [borderRadius, setBorderRadius] = useState('rounded-xl');
   const [padding, setPadding] = useState('p-3');
   const [fontSize, setFontSize] = useState('text-base');
   const [fontWeight, setFontWeight] = useState('font-normal');
+  const [letterSpacing, setLetterSpacing] = useState('tracking-normal');
   const codeRef = useRef();
+
+  useEffect(() => {
+    console.log('preview-tool.defaultTheme', defaultTheme);
+  }, []);
 
   const ClipboardIcon = () => (
     <svg
@@ -54,7 +65,7 @@ const tool = () => {
                 className='mb-5 p-3 font-mono text-lg bg-gray-200 rounded-xl'
                 ref={codeRef}
               >
-                {`${padding} ${background} ${borderRadius} ${fontSize} ${fontWeight} ${fontColor}`}
+                {`${padding} ${elementBackground} ${borderRadius} ${fontSize} ${fontWeight} ${fontColor} ${letterSpacing} ${boxShadow}`}
               </code>
               <button
                 className='flex justify-center items-center w-16 p3 bg-gray-200 rounded-xl ml-5 mb-5'
@@ -63,20 +74,30 @@ const tool = () => {
                 <ClipboardIcon />
               </button>
             </div>
-            <div className='demo-element-container bg-gray-200 h-96 rounded-xl flex justify-center items-center'>
+            <div
+              className={`demo-element-container ${containerBackground} h-96 rounded-xl flex justify-center items-center`}
+            >
               <button
-                className={`${background} ${borderRadius} ${fontSize} ${fontWeight} ${fontColor} p-3 m-6`}
+                className={`${elementBackground} ${borderRadius} ${fontSize} ${fontWeight} ${fontColor} ${letterSpacing} ${boxShadow} p-3 m-6`}
               >
                 Example btn
               </button>
             </div>
           </div>
           <div className='property-container p-3 rounded-xl w-1/2 flex flex-wrap'>
-            <h2 className='w-full text-2xl pb-5'>Background</h2>
+            <h2 className='w-full text-2xl pb-5'>Container Background</h2>
             {backgroundClasses.map((option) => (
               <div
                 className={`${option.value} border-2 border-gray-400 h-10 w-10 m-1 rounded-xl cursor-pointer`}
-                onClick={() => setBackground(option.value)}
+                onClick={() => setContainerBackground(option.value)}
+                key={option.value}
+              ></div>
+            ))}
+            <h2 className='w-full text-2xl py-5'>Element Background</h2>
+            {backgroundClasses.map((option) => (
+              <div
+                className={`${option.value} border-2 border-gray-400 h-10 w-10 m-1 rounded-xl cursor-pointer`}
+                onClick={() => setElementBackground(option.value)}
                 key={option.value}
               ></div>
             ))}
@@ -90,6 +111,18 @@ const tool = () => {
                 Content
               </p>
             ))}
+            <h2 className='w-full text-2xl py-5'>Box Shadow</h2>
+            <div className='bg-gradient-to-r from-indigo-50 to-indigo-100 flex flex-wrap rounded-xl'>
+              {boxShadowClasses.map((option) => (
+                <div
+                  className={`${option} w-20 h-20 m-5 rounded-xl cursor-pointer bg-white flex items-center justify-center p-5 text-center`}
+                  onClick={() => setBoxShadow(option)}
+                  key={option}
+                >
+                  {`.${option}`}
+                </div>
+              ))}
+            </div>
             <h2 className='w-full text-2xl py-5'>Border Radius</h2>
             {borderRadiusClasses.map((option) => (
               <div
@@ -103,6 +136,16 @@ const tool = () => {
               <p
                 className={`flex items-center m-1 ${option} cursor-pointer`}
                 onClick={() => setFontSize(option)}
+                key={option}
+              >
+                Content
+              </p>
+            ))}
+            <h2 className='w-full text-2xl py-5'>Letter Spacing</h2>
+            {letterSpacingClasses.map((option) => (
+              <p
+                className={`flex items-center m-1 ${option} cursor-pointer`}
+                onClick={() => setLetterSpacing(option)}
                 key={option}
               >
                 Content
