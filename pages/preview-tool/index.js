@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import {
   backgroundClasses,
   borderRadiusClasses,
+  fontColorClasses,
   fontSizeClasses,
   fontWeightClasses,
   paddingClasses,
@@ -9,6 +10,7 @@ import {
 
 const tool = () => {
   const [background, setBackground] = useState('bg-blue-500');
+  const [fontColor, setFontColor] = useState('text-black');
   const [borderRadius, setBorderRadius] = useState('rounded-xl');
   const [padding, setPadding] = useState('p-3');
   const [fontSize, setFontSize] = useState('text-base');
@@ -52,7 +54,7 @@ const tool = () => {
                 className='mb-5 p-3 font-mono text-lg bg-gray-200 rounded-xl'
                 ref={codeRef}
               >
-                {`${padding} ${background} ${borderRadius} ${fontSize} ${fontWeight}`}
+                {`${padding} ${background} ${borderRadius} ${fontSize} ${fontWeight} ${fontColor}`}
               </code>
               <button
                 className='flex justify-center items-center w-16 p3 bg-gray-200 rounded-xl ml-5 mb-5'
@@ -63,7 +65,7 @@ const tool = () => {
             </div>
             <div className='demo-element-container bg-gray-200 h-96 rounded-xl flex justify-center items-center'>
               <button
-                className={`${background} ${borderRadius} ${fontSize} ${fontWeight} p-3 m-6`}
+                className={`${background} ${borderRadius} ${fontSize} ${fontWeight} ${fontColor} p-3 m-6`}
               >
                 Example btn
               </button>
@@ -78,6 +80,16 @@ const tool = () => {
                 key={option.value}
               ></div>
             ))}
+            <h2 className='w-full text-2xl py-5'>Font color</h2>
+            {fontColorClasses.map((option) => (
+              <p
+                className={`${option.value} h-10 m-1 rounded-xl cursor-pointer`}
+                onClick={() => setFontColor(option.value)}
+                key={option.value}
+              >
+                Content
+              </p>
+            ))}
             <h2 className='w-full text-2xl py-5'>Border Radius</h2>
             {borderRadiusClasses.map((option) => (
               <div
@@ -86,7 +98,7 @@ const tool = () => {
                 key={option}
               ></div>
             ))}
-            <h2 className='w-full text-2xl py-5'>Font Sizes</h2>
+            <h2 className='w-full text-2xl py-5'>Font Size</h2>
             {fontSizeClasses.map((option) => (
               <p
                 className={`flex items-center m-1 ${option} cursor-pointer`}
