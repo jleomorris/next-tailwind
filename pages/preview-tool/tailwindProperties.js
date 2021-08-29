@@ -77,7 +77,7 @@ export const backgroundClasses = [
   { value: 'bg-pink-900', label: 'bg-pink-900' },
 ];
 
-export const roundedClasses = [
+export const borderRadiusClasses = [
   'rounded-none',
   'rounded-sm	',
   'rounded',
@@ -159,4 +159,73 @@ export const roundedClasses = [
   'rounded-bl-2xl',
   'rounded-bl-3xl',
   'rounded-bl-full',
+];
+
+export const paddingClasses = {
+  prepends: ['p', 'px', 'py', 'pt', 'pr', 'pb', 'pl'],
+  values: [
+    '-0',
+    '-px',
+    '-0.5',
+    '-1',
+    '-1.5',
+    '-2',
+    '-2.5',
+    '-3',
+    '-3.5',
+    '-4',
+    '-5',
+    '-6',
+    '-7',
+    '-8',
+    '-9',
+    '-10',
+    '-11',
+    '-12',
+    '-14',
+    '-16',
+    '-20',
+    '-24',
+    '-28',
+    '-32',
+    '-36',
+    '-40',
+    '-44',
+    '-48',
+    '-52',
+    '-56',
+    '-60',
+    '-64',
+    '-72',
+    '-80',
+    '-96',
+  ],
+};
+
+export const fontSizeClasses = [
+  'text-xs',
+  'text-sm',
+  'text-base',
+  'text-lg',
+  'text-xl',
+  'text-2xl',
+  'text-3xl',
+  'text-4xl',
+  'text-5xl',
+  'text-6xl',
+  'text-7xl',
+  'text-8xl',
+  'text-9xl',
+];
+
+export const fontWeightClasses = [
+  'font-thin',
+  'font-extralight',
+  'font-light',
+  'font-normal',
+  'font-medium',
+  'font-semibold',
+  'font-bold',
+  'font-extrabold',
+  'font-black',
 ];
