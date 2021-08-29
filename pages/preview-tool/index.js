@@ -23,17 +23,19 @@ const tool = () => {
       <div className='tool-container p-20'>
         <div className='header'>
           <h1 className='text-8xl pb-9'>Preview tool</h1>
-          <code className='p-3 font-mono text-lg bg-gray-100 rounded-md'>
-            {`${padding} ${background} ${borderRadius} ${fontSize} ${fontWeight}`}
-          </code>
         </div>
         <div className='body flex justify-center items-start py-10'>
-          <div className='demo-element-container bg-gray-200 w-1/2 h-96 rounded-xl flex justify-center items-center mr-24'>
-            <button
-              className={`${background} ${borderRadius} ${fontSize} ${fontWeight} p-3 m-6`}
-            >
-              Example btn
-            </button>
+          <div className='sticky top-14 left-0 flex flex-col w-1/2 mr-24'>
+            <code className='mb-5 p-3 font-mono text-lg bg-gray-200 rounded-xl'>
+              {`${padding} ${background} ${borderRadius} ${fontSize} ${fontWeight}`}
+            </code>
+            <div className='demo-element-container bg-gray-200 h-96 rounded-xl flex justify-center items-center'>
+              <button
+                className={`${background} ${borderRadius} ${fontSize} ${fontWeight} p-3 m-6`}
+              >
+                Example btn
+              </button>
+            </div>
           </div>
           <div className='property-container p-3 rounded-xl w-1/2 flex flex-wrap'>
             <h2 className='w-full text-2xl pb-5'>Background</h2>
