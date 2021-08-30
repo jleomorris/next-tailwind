@@ -11,6 +11,7 @@ import {
 } from './tailwindProperties';
 import head from 'next/head';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import ReturnHome from '../../components/ReturnHome';
 
 const tool = () => {
   const [elementBackground, setElementBackground] = useState('bg-blue-500');
@@ -172,9 +173,7 @@ const tool = () => {
             ))} */}
           </div>
         </div>
-        <a href='/' className='text-2xl'>
-          <span className='pr-2'>&#8592;</span>Return to home
-        </a>
+        <ReturnHome />
       </div>
     </>
   );
