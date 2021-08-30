@@ -71,6 +71,17 @@ export default function Home() {
             <h3 className='text-2xl font-bold'>Preview tool &rarr;</h3>
             <p className='mt-4 text-xl'>See the preview tool</p>
           </a>
+          <a
+            href='/examples'
+            className='bg-purple-300 text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border w-96 rounded-xl hover:text-black focus:text-black'
+          >
+            <h3 className='text-2xl font-bold'>
+              Self developed custom components &rarr;
+            </h3>
+            <p className='mt-4 text-xl'>
+              See a range of prebuilt custom components
+            </p>
+          </a>
         </div>
       </main>
 
