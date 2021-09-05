@@ -1,13 +1,13 @@
 .card {
-  @apply text-gray-900 p-6 mt-6 text-left border rounded-xl;
+  @apply text-gray-900 p-6 mt-6 text-left rounded-xl w-full max-w-lg;
 }
 
 .card:hover {
-  @apply bg-opacity-75 border-2;
+  @apply bg-opacity-75;
 }
 
-@screen sm {
+@screen md {
   .card {
-    @apply mr-5;
+    @apply w-1/2 mr-5;
   }
 }

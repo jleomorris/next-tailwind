@@ -25,7 +25,7 @@ export default function Home() {
           </code> */}
           </p>
 
-          <div className='flex flex-wrap justify-center lg:justify-start mt-6 max-w-6xl sm:w-full'>
+          <div className='flex flex-wrap justify-center mt-6 max-w-6xl sm:w-full'>
             <a
               href='https://tailwindcss.com/docs'
               className={`${homeStyles.card} bg-purple-200`}
@@ -66,13 +66,7 @@ export default function Home() {
                 Tailwind CSS Components.{' '}
               </p>
             </a>
-            <a
-              href='/preview-tool'
-              className={`${homeStyles.card} bg-yellow-200`}
-            >
-              <h3 className='text-2xl font-bold'>Preview tool &rarr;</h3>
-              <p className='mt-4 text-xl'>See the preview tool</p>
-            </a>
+
             <a href='/examples' className={`${homeStyles.card} bg-purple-300`}>
               <h3 className='text-2xl font-bold'>
                 Self developed custom components &rarr;
@@ -80,6 +74,14 @@ export default function Home() {
               <p className='mt-4 text-xl'>
                 See a range of prebuilt custom components
               </p>
+            </a>
+
+            <a
+              href='/preview-tool'
+              className={`${homeStyles.card} bg-yellow-200`}
+            >
+              <h3 className='text-2xl font-bold'>Preview tool &rarr;</h3>
+              <p className='mt-4 text-xl'>See the preview tool</p>
             </a>
           </div>
         </main>
