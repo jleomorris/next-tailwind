@@ -2,7 +2,7 @@ const SkillCard = () => {
   const skills = ['React', 'Redux', 'Node'];
 
   return (
-    <div className='skill-card w-96 bg-white rounded-2xl overflow-hidden shadow-2xl'>
+    <div className='m-5 skill-card max-w-md md:max-w-sm h-full bg-white rounded-2xl overflow-hidden shadow-md'>
       <div className='h-44 overflow-hidden'>
         <img
           className='h-full w-full object-cover'
@@ -10,7 +10,7 @@ const SkillCard = () => {
           alt='skill'
         />
       </div>
-      <div className='bg-gray-200 p-5'>
+      <div className='bg-white p-5'>
         <h2 className='text-3xl font-bold mb-3'>Blog</h2>
         <p className=''>
           A simple blog project developed to increase my knowledge of ReactJS.

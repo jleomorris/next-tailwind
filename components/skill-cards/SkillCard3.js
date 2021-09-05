@@ -2,7 +2,7 @@ const SkillCard3 = () => {
   const skills = ['React', 'Redux', 'Node'];
 
   return (
-    <div class='max-w-md mx-auto h-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl'>
+    <div class='m-5 max-w-md h-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl'>
       <div class='md:flex'>
         <div class='md:flex-shrink-0'>
           <img
