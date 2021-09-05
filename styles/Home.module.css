@@ -1,0 +1,13 @@
+.card {
+  @apply text-gray-900 p-6 mt-6 text-left border rounded-xl;
+}
+
+.card:hover {
+  @apply bg-opacity-75 border-2;
+}
+
+@screen sm {
+  .card {
+    @apply mr-5;
+  }
+}

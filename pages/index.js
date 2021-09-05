@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import homeStyles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
           <h1 className='text-6xl font-bold'>
             Explore{' '}
-            <a className='zzz' href='https://tailwindcss.com/'>
+            <a className={homeStyles.error} href='https://tailwindcss.com/'>
               Tailwind CSS
             </a>
           </h1>
@@ -28,7 +28,7 @@ export default function Home() {
           <div className='flex flex-wrap justify-center lg:justify-start mt-6 max-w-6xl sm:w-full'>
             <a
               href='https://tailwindcss.com/docs'
-              className='sm:mr-5 bg-purple-200 text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border rounded-xl hover:text-black focus:text-black'
+              className={`${homeStyles.card} bg-purple-200`}
             >
               <h3 className='text-2xl font-bold'>Documentation &rarr;</h3>
               <p className='mt-4 text-xl'>
@@ -38,7 +38,7 @@ export default function Home() {
 
             <a
               href='https://play.tailwindcss.com/'
-              className='sm:mr-5 bg-pink-200 max-w-md text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border rounded-xl hover:text-black focus:text-black'
+              className={`${homeStyles.card} bg-pink-200`}
             >
               <h3 className='text-2xl font-bold'>Learn the basics &rarr;</h3>
               <p className='mt-4 text-xl'>
@@ -48,7 +48,7 @@ export default function Home() {
 
             <a
               href='https://blog.tailwindcss.com/'
-              className='sm:mr-5 bg-green-200 max-w-md text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border rounded-xl hover:text-black focus:text-black'
+              className={`${homeStyles.card} bg-green-200 `}
             >
               <h3 className='text-2xl font-bold'>Tailwind News &rarr;</h3>
               <p className='mt-4 text-xl'>
@@ -58,7 +58,7 @@ export default function Home() {
 
             <a
               href='https://tailwindui.com/'
-              className='sm:mr-5 bg-blue-200 max-w-md text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border rounded-xl hover:text-black focus:text-black'
+              className={`${homeStyles.card} bg-blue-200`}
             >
               <h3 className='text-2xl font-bold'>Tailwind UI &rarr;</h3>
               <p className='mt-4 text-xl'>
@@ -68,15 +68,12 @@ export default function Home() {
             </a>
             <a
               href='/preview-tool'
-              className='sm:mr-5 bg-yellow-200 max-w-md text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border rounded-xl hover:text-black focus:text-black'
+              className={`${homeStyles.card} bg-yellow-200`}
             >
               <h3 className='text-2xl font-bold'>Preview tool &rarr;</h3>
               <p className='mt-4 text-xl'>See the preview tool</p>
             </a>
-            <a
-              href='/examples'
-              className='sm:mr-5 bg-purple-300 max-w-md text-gray-600 bg-opacity-100 hover:bg-opacity-75 p-6 mt-6 text-left border rounded-xl hover:text-black focus:text-black'
-            >
+            <a href='/examples' className={`${homeStyles.card} bg-purple-300`}>
               <h3 className='text-2xl font-bold'>
                 Self developed custom components &rarr;
               </h3>
