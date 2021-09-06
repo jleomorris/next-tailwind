@@ -5,8 +5,8 @@ const Whatsapp = () => {
       id='Capa_1'
       x='0px'
       y='0px'
-      width='30.667px'
-      height='30.667px'
+      width='30px'
+      height='30px'
       viewBox='0 0 30.667 30.667'
       className='fill-current text-white'
     >

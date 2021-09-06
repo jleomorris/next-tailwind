@@ -7,6 +7,8 @@ import NewMessage from '../../components/ChitChat/NewMessage';
 import JobCard1 from '../../components/Job-cards/JobCard1';
 import MarketingCard from '../../components/Marketing-cards/MarketingCard';
 import MessageNotification from '../../components/Whatsapp/MessageNotification';
+import MessageNotification2 from '../../components/Whatsapp/MessageNotification2';
+import MessageNotification3 from '../../components/Whatsapp/MessageNotification3';
 
 const examples = () => {
   return (
@@ -32,8 +34,10 @@ const examples = () => {
         <MarketingCard />
       </div>
       <h2 className='my-10 text-4xl'>Whatsapp</h2>
-      <div className='p-5 flex flex-wrap justify-center items-center p-5 bg-green-300 rounded-xl'>
+      <div className='p-5 flex flex-wrap justify-center items-center bg-green-300 rounded-xl'>
         <MessageNotification />
+        <MessageNotification2 />
+        <MessageNotification3 />
       </div>
       <ReturnHome />
     </div>
