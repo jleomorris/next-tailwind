@@ -8,7 +8,7 @@ import {
   fontWeightClasses,
   letterSpacingClasses,
   paddingClasses,
-} from './tailwindProperties';
+} from '../../tailwindProperties';
 import head from 'next/head';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import ReturnHome from '../../components/ReturnHome';
@@ -60,7 +60,10 @@ const tool = () => {
           <h1 className='text-8xl pb-9'>Preview tool</h1>
         </div>
         <div className='body flex justify-center items-start py-10'>
-          <div className='sticky top-14 left-0 flex flex-col w-1/2 mr-24'>
+          <div
+            style={{ top: '50px' }}
+            className='sticky left-0 flex flex-col w-1/2 mr-24'
+          >
             <div className='flex'>
               <code
                 className='mb-5 p-3 font-mono text-lg bg-gray-200 rounded-xl'
